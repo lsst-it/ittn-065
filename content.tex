@@ -1,0 +1,65 @@
+\section{Monitoring}
+
+DM Devops will use the following monitoring stack:
+
+\begin{itemize}
+    \item Icinga
+    \item Prometheus
+    \item Uptime Robot
+    \item Custom Made Tools
+\end{itemize}
+
+\section{Rubin vNOC - TBD}
+
+A virtual NOC will monitor the critical components of Rubin's infrastructure after hours. 
+
+DM DevOps will provide a dashboard with metrics of such components, and a Web form to trigger an alert to the On-Call shift.  
+
+The Rubin vNOC could be a separate instance from the LHN vNOC and despite Rubin’s vNOC focus is the infrastructure in Chile, some LHN data points will also be monitored. 
+
+
+\section{Alerting}
+
+Alerts will be triggered by the monitoring stack and routed to the incidement management tool using commodity internet. 
+The incident management tool will control the shift rotations and will alert according to the severity of the fault. 
+
+The level of the severity will be quantified according to the amount of users affected by the fault.
+
+\begin{itemize}
+    \item Critical: Many users affected. 
+    \item Major: Some users affected.
+    \item Minor: A couple of users are affected
+    \item Warning: No users affected, service degraded but functional. 
+\end{itemize}
+
+Only \textbf{Critical} and \textbf{Major} faults will trigger the notification to the On-Call shift. 
+
+
+\section{On-Call Shift}
+
+The On Call Shift will be any service organized by the DevOps or DM Manager, or an equivalent position, and in all cases authorized by Human Resources, in which one or more DevOps staff must be available to work outside of working hours to work in an emergency. 
+The employee in this On-Call Shift, must be previously informed by email so that he/she can provide his/her agreement using this same medium. Additionally, the employee in On-Call Shift will receive the necessary equipment to be contacted and to work out of hours. 
+
+To ensure the resting period of the employee, if the resting period is interrupted for more than 30 minutes, the employee will be able to delay their arrival on the next day, in the same proportion, informing the manager.
+
+\section{On-Call Shift Fixed Allowance}
+
+The worker on this shift will receive the following allowance, regardless no emergencies are reported during the On-Call shift.
+
+10\% x [Number of hours in On-call shift] x [Hourly Gross Salary]
+
+
+\section{On Call Shift Variable Allowance}
+
+In the case the employee in this shift is called to work and executes his/her services, he/she will receive every worked hour with a cost of 100\% of the hourly gross salary, and a 100\% increase of the hourly gross salary if the emergency happens on a Sunday or holidays. Every time the employee in the On-Call Shift is required to work, the minimum to pay is the equivalent of 1 hour. 
+
+Given the complexity of Rubin’s infrastructure, the resolution of a fault may require the participation of one or more DevOps members. If this is the case, the On Call Shift Variable Allowance will also be applied to the other DevOps members working to resolve the fault. 
+
+After its execution, this allowance will be included in the next month's wage.
+
+
+\section{Fault Resolution}
+
+Most of the faults during the On-Call Shift will be solved or worked around; however, the resolution of some faults may require significant modifications in Rubin’s platform that could compromise the integrity of data or other systems. These faults won’t be repaired during the night and will be re-evaluated during the following day by the DevOps team.
+
+The decision to leave a fault open until the next morning, will be made by the DevOps engineer working on the fault. If leaving the fault open until the following day blocks the observing, the DevOps Manager will decide to leave the fault open in coordination with the manager responsible for the observing.  
